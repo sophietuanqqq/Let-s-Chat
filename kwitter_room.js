@@ -1,18 +1,20 @@
 var firebaseConfig = {
-      apiKey: "AIzaSyCTA4O4XTsccK2F-b519giSOwzD1jAmZGg",
-      authDomain: "let-s-chat-app-4d348.firebaseapp.com",
-      databaseURL: "https://let-s-chat-app-4d348-default-rtdb.firebaseio.com",
-      projectId: "let-s-chat-app-4d348",
-      storageBucket: "let-s-chat-app-4d348.appspot.com",
-      messagingSenderId: "496807875228",
-      appId: "1:496807875228:web:efb20535a7429064e09359"
-    };
-    
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+      apiKey: "AIzaSyCTooAgyvF-ObIZiqPnTBDMntEVR_w4Uuk",
+      authDomain: "kwitter-fcc53.firebaseapp.com",
+      databaseURL: "https://kwitter-fcc53-default-rtdb.firebaseio.com",
+      projectId: "kwitter-fcc53",
+      storageBucket: "kwitter-fcc53.appspot.com",
+      messagingSenderId: "990816459746",
+      appId: "1:990816459746:web:a720e0b1110aad42e677bb",
+      measurementId: "G-5E9RESNGEZ"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 //ADD YOUR FIREBASE LINKS HERE
 
 user_name = localStorage.getItem("user_name");
+
 document.getElementById("user_name").innerHTML = "Welcome " + user_name + "!";
 function addRoom() {
       room_name = document.getElementById("room_name").value;
@@ -45,3 +47,11 @@ function redirectToRoomName(name) {
       window.location="kwitter_page.html";
       
 }
+
+function logout() {
+      localStorage.removeItem("user_name");
+      localStorage.removeItem("room_name");
+      window.location="index.html";
+
+}
+
